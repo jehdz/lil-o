@@ -10,6 +10,8 @@ const { render } = require('ejs');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
+const authRouter = require('./src/routers/authRouter')
+
 
 
 // middleware 
@@ -20,14 +22,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // for passport js --> user authenthication 
 app.use(cookieParser());
-app.use(session({secret: 'captured-content', resave: true, saveUninitialized: true }));
+app.use(session({secret: 'captureContent', resave: true, saveUninitialized: true }));
 
 
 
-// require('./src/config/passport.js')(app);
+require('./src/config/passport.js')(app);
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
+
+app.use('/auth', authRouter)
 
 
 app.get("/", (req, res) => {
