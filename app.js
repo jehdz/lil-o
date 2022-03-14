@@ -10,7 +10,8 @@ const { render } = require('ejs');
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-const authRouter = require('./src/routers/authRouter')
+const accountRouter = require('./src/routers/accountRouter');
+const usersRouter = require('./src/routers/usersRouter')
 
 
 
@@ -31,7 +32,7 @@ require('./src/config/passport.js')(app);
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
-app.use('/auth', authRouter)
+app.use('/account', accountRouter)
 
 
 app.get("/", (req, res) => {
