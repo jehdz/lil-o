@@ -33,7 +33,7 @@
   },
   "nodemonConfig": {
     "env": {
-      "PORT": 3010
+      "PORT": 3220
     }
   }
 }
