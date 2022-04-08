@@ -1,0 +1,172 @@
+:root {
+    --mainColor: #B2BBD8;
+}
+
+body {
+    margin: 0;
+    color: #000000;
+    padding: 0;
+    font-family: "nunito_sans", Arial, Helvetica;
+    height: 100%;
+}
+
+#site_wrapper {
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    margin: 0 auto 0;
+}
+
+#header_wrap {
+    z-index: 15;
+    position: absolute;
+    width: 100%;
+}
+
+.main_shell{
+    max-width:1660px; 
+    width:auto; 
+    margin:0 auto; 
+    padding: 0 30px;
+}
+
+/* Nav Bar  */
+
+.navbar{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--mainColor);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 2vh 0;
+}
+
+.logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.logo{
+    width: 55px;
+    height: auto;
+    margin: 0px 0px 0px 40px ;
+}
+
+.logo_text{
+    font-size: 30px;
+}
+
+.nav_list{
+    float: right;
+    margin: 0px 40px;
+
+}
+
+.nav_item{
+    display: inline-block;
+}
+
+.nav_item_container > a {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 5px 15px 5px 15px;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+.nav_item_container > a:hover{
+    transition: .1s ease-in-out;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Create account container styling */
+
+.create_account_container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.form_container {
+    
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    margin-top: 20px;
+}
+
+
+.loginToggle{
+
+    border: 2px solid black;
+    background: black;
+    color: white;
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+.registerToggle{
+
+    border: 2px solid black;
+    background: black;
+    color: white;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.toggled{
+    border: 2px solid rgb(68, 68, 68);
+    background: rgb(68, 68, 68);
+    color: rgb(150, 150, 150);
+}
+
+
+/* Mobile media queries  */
+
+
+@media screen and (max-width:768px){
+    .main_shell{
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width:500px){
+
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav_list{
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo{
+        margin: 0;
+    }
+
+    .logo_text{
+        display: none;
+    }
+
+    
+}

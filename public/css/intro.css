@@ -1,0 +1,29 @@
+.options_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    height: 100px;
+}
+.intro_buttons{
+    text-decoration: none;
+    background : #b2bbd8;
+    color: #fff;
+    border: 2px solid #b2bbd8;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 25px;
+}
+
+.intro_buttons:hover{
+        border-radius: 25px;
+
+    transition: ease-in-out .3s ;
+    text-decoration: none;
+    background : #fff;
+    color: #b2bbd8;
+    border: 2px solid white;
+}

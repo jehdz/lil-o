@@ -1,0 +1,19 @@
+<!-- ejs example to loop throuigh objects being passed to ejs file from js file -->
+
+
+<!-- ejs code  -->
+<h1> <%= title %> </h1>
+
+<% data.map((i) => {
+  %> <li> <%=i %>  </li> <%
+}) 
+
+%> 
+
+
+
+// js code
+
+app.get("/", (req, res) => {
+    res.render('index', {title: 'This is working properly', data: ['a', 'b', 'c']})
+})
