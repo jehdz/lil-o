@@ -70,39 +70,14 @@ accountRouter.route('/')
 
 accountRouter.route('/welcome').get((req, res) => {
 
-    const { fName, lName, username, email, password} = req.body;
-
-
-    const url = 'mongodb+srv://testingDB:PyyMAfDN2Ue4ta2@cluster0.gmpln.mongodb.net?retryWrites=true&w=majority';
-    const dbName = 'captureContent';
-
-
-    (async function getUser() {
-        let client;
-
-        try {
-            client = await MongoClient.connect(url);
-
-            const db = client.db(dbName);
-            const user = { fName, lName, username, email, password };
-            const results = await db.collection('users').findOne(user);
-            debug(results);
-            req.login(results, () => {
-                res.redirect('/account/welcome');
-            });
-
-        } catch (error) {
-            debug(error);
-        }
-
-        client.close();
-    }())
-    
-    // res.render('accountCreated');
+    res.render('accountCreated');
     // console.log('account was created')
 })
 
 
+accountRouter.route('/profile').get((req, res) => {
+
+})
 
 
 
